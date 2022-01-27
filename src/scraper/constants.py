@@ -1,1 +1,1 @@
-ITEM_LIST_PATH = '/Home/GetWorldMarketSubList'
+ITEM_LIST_PATH = '/Trademarket/GetWorldMarketSubList'
