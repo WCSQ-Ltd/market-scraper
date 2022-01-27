@@ -1,0 +1,1 @@
+ITEM_LIST_PATH = '/Home/GetWorldMarketSubList'
