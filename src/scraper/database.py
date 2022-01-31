@@ -21,7 +21,4 @@ def create_schema():
 
 def create_session() -> SessionLocal:
     db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+    return db
