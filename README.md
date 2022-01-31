@@ -35,3 +35,4 @@ This project's default DB is SQLite, meant only for light usage.
 
 - Discord notification
 - SMS notification maybe
+- Make watchlist accept [item name, enhance level] instead of [item id, enhance level]
