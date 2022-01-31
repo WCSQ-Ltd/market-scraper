@@ -20,6 +20,9 @@ https://developers.veliainn.com/
     - Navigate to `./src`
     - `$ pipenv install`
 
+    Create DB tables
+    - `$ pipenv run alembic upgrade head`
+
 3. Run the code while still in the `./src` directory
     - `$ pipenv run python main.py`
 

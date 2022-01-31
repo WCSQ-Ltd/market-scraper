@@ -1,4 +1,5 @@
 import json
+import discord
 
 from scraper.api import get_item_waiting_list
 from scraper.database import create_session
@@ -19,7 +20,6 @@ def fetch_waiting_list(db, watchlist: dict) -> None:
             notify_user_of_hits(hits)
 
 
-
 if __name__ == '__main__':
     # initialize database
     db = create_session()
@@ -28,13 +28,3 @@ if __name__ == '__main__':
     watchlist = json.load(f)
 
     fetch_waiting_list(db, watchlist)
-
-    # found_list = []
-    # for item in watchlist['watchlist']:
-    #     data = get_item_listings(item['itemID'])
-    #     cnt = get_item_listed_count_by_level(data.json(), item['min_level'], item['max_level'])
-    #     if cnt > 0:
-    #         found_list.append(f'{cnt} listings found for {item["name"]}')
-
-    # for item in found_list:
-    #     print(item)

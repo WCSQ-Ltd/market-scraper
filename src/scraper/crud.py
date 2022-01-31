@@ -26,16 +26,19 @@ def get_item_by_game_id(db: SessionLocal, item_game_id: str) -> Item:
         return db_item.first()
     raise Exception('Item not found.')
 
+
 def serialize_item_list(item_list: list) -> list:
     """
     Converts item list from API response format to a more readable list of dictionaries
     """
     items = []
     for item in item_list:
+        time_to_list_dt = datetime.fromtimestamp(item[3])
+        time_to_list_str = time_to_list_dt.strftime('%m/%d/%Y, %H:%M:%S')
         data = {
             'item_id': item[0],
             'item_level': item[1],
-            'time_to_list': item[3],
+            'time_to_list': time_to_list_str,
         }
         items.append(data)
     return items
