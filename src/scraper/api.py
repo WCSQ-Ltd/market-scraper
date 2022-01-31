@@ -1,7 +1,13 @@
 import requests
 
 from .settings import MARKET_URL, HEADERS
-from .constants import ITEM_LIST_PATH
+from .constants import ITEM_LIST_PATH, WAITHING_LIST_PATH
+
+
+def get_item_waiting_list():
+    waiting_path = f'{MARKET_URL}{WAITHING_LIST_PATH}'
+    resp = requests.post(waiting_path)
+    return resp
 
 
 def get_item_listings(item_id: str):

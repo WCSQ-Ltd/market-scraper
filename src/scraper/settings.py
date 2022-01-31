@@ -7,3 +7,5 @@ HEADERS = {
 }
 
 MARKET_URL = config('MARKET_URL', default='https://trade.sea.playblackdesert.com')
+
+SQLALCHEMY_DATABASE_URL = config('SQLALCHEMY_DATABASE_URL', default='sqlite:///scraper.db')

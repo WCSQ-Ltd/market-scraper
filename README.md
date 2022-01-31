@@ -1,6 +1,9 @@
 # market-scraper
 Reports item count of listed items in specified in your watchlist.
 
+**WARNING**
+This project has no roadmap. DO NOT expect updates/support from the maintainers.
+
 # BDO Market API guide
 
 https://developers.veliainn.com/
@@ -21,6 +24,12 @@ https://developers.veliainn.com/
     - `$ pipenv run python main.py`
 
 4. The software will print in the terminal how many items are listed for each item in your watchlist if count is > 0
+
+
+# Database
+
+This project's default DB is SQLite, meant only for light usage.
+
 
 # Future features
 

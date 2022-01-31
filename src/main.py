@@ -1,9 +1,14 @@
 import json
 
 from scraper.api import get_item_listings, get_item_listed_count_by_level
+from scraper.database import create_schema, create_session
 
 
 if __name__ == '__main__':
+    # initialize database
+    create_schema()
+    db = create_session()
+
     f = open('watchlist.json')
 
     watchlist = json.load(f)
