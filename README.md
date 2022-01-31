@@ -16,17 +16,20 @@ https://developers.veliainn.com/
         - Example for TET: `min_level: 19`, `max_level: 19`
         - Example for PEN: `min_level: 20`, `max_level: 20`
 
-2. Install python stuff
+2. Rename `.env.example` to `.env`, and change `DISCORD_WEBHOOK_URL` value to your webhook url.
+    - https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+
+3. Install python stuff
     - Navigate to `./src`
     - `$ pipenv install`
 
     Create DB tables
     - `$ pipenv run alembic upgrade head`
 
-3. Run the code while still in the `./src` directory
+4. Run the code while still in the `./src` directory
     - `$ pipenv run python main.py`
 
-4. The software will print in the terminal how many items are listed for each item in your watchlist if count is > 0
+5. The software will print in the terminal how many items are listed for each item in your watchlist if count is > 0
 
 
 # Database
@@ -36,6 +39,6 @@ This project's default DB is SQLite, meant only for light usage.
 
 # Future features
 
-- Discord notification
+- ~~Discord notification~~
 - SMS notification maybe
 - Make watchlist accept [item name, enhance level] instead of [item id, enhance level]
