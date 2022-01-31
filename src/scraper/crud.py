@@ -83,9 +83,10 @@ def humanize_hits(db, hits: list) -> list:
             items.append(item)
         except Exception:
             db_item = get_or_create_item_name_from_bdocodex(db, item_game_id)
-            # Item not found in db, fetch from bdocodex
-            item['name'] = db_item.name
-            items.append(item)
+            if db_item:
+                # Item not found in db, fetch from bdocodex
+                item['name'] = db_item.name
+                items.append(item)
     return items
 
 
